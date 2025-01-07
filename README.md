@@ -1,10 +1,4 @@
-- 👋 Hi, I’m @itzzoya
-- 👀 I’m interested in coding...
-- 🌱 I’m currently learning engineering...
-- 💞️ ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+
 
 
  Portfolio
@@ -14,8 +8,8 @@
 I am passionate about technology and problem-solving. Here's a glimpse of my work:
 
  🛠️ Projects
-- **Project 1**: A short description of your project.
-- **Project 2**: A short description of another project.
+- **Project 1**:City management
+
 
  🚀 Skills
 - C++, Python, JavaScript
@@ -23,7 +17,7 @@ I am passionate about technology and problem-solving. Here's a glimpse of my wor
 - Web Development (React.js, Node.js)
 
  🌐 Find Me Online
-- [GitHub](https://github.com/your-github-username)
+- [GitHub](https://github.com/itzzoya/itzzoya/edit/main/README.md)
 - [LinkedIn](https://linkedin.com/in/your-linkedin-profile)
 
  Portfolio Topic
@@ -42,16 +36,16 @@ I am passionate about technology and problem-solving. Here's a glimpse of my wor
 
 <dt>Course Code:24ecs205</dt>
 
-<dt>Name: Zoya Hudli</dt>
-<dd>Your Name</dd>
+<dt>Name: </dt>
+<dd>Zoya Hudli</dd>
 <dt>SRN</dt>
-<dd>Your SRN</dd>
+<dd>02FE23BCS056</dd>
 <dt>Course Instructor</dt>
-<dd>Instructor Name Placeholder</dd>
+<dd>Prof.Shankar Biradar</dd>
 <dt>University</dt>
-<dd>Your University Name</dd>
+<dd>KLE TECHNOLOGICAL UNIVERSITY</dd>
 <dt>Portfolio Topic/Domain</dt>
-<dd>Google</dd>
+<dd>City Management</dd>
 </dl>
 
 <br> 
