@@ -38,11 +38,11 @@ I am passionate about technology and problem-solving. Here's a glimpse of my wor
 [About Me](about.md)
 
 <dl>
-<dt>Course Name</dt>
-<dd>Algorithmic Problem Solving</dd>
-<dt>Course Code</dt>
-<dd>Course Code Placeholder</dd>
-<dt>Name</dt>
+<dt>Course Name:Algorithms lab</dt>
+
+<dt>Course Code:24ecs205</dt>
+
+<dt>Name: Zoya Hudli</dt>
 <dd>Your Name</dd>
 <dt>SRN</dt>
 <dd>Your SRN</dd>
