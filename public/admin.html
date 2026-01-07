@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MongoDB Data Viewer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        button { padding: 10px 20px; margin: 10px 0; background: #007bff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Resort Bookings Database</h1>
+    <button onclick="loadBookings()">Refresh Data</button>
+    <div id="bookings"></div>
+
+    <script>
+        async function loadBookings() {
+            try {
+                const response = await fetch('/api/bookings');
+                const result = await response.json();
+                
+                if (result.success) {
+                    displayBookings(result.bookings);
+                }
+            } catch (error) {
+                document.getElementById('bookings').innerHTML = 'Error loading data';
+            }
+        }
+
+        function displayBookings(bookings) {
+            if (bookings.length === 0) {
+                document.getElementById('bookings').innerHTML = '<p>No bookings found</p>';
+                return;
+            }
+
+            const table = `
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Check-in</th>
+                        <th>Check-out</th>
+                        <th>Room Type</th>
+                        <th>Guests</th>
+                        <th>Created</th>
+                    </tr>
+                    ${bookings.map(booking => `
+                        <tr>
+                            <td>${booking._id}</td>
+                            <td>${booking.name}</td>
+                            <td>${booking.email}</td>
+                            <td>${booking.phone}</td>
+                            <td>${new Date(booking.checkIn).toLocaleDateString()}</td>
+                            <td>${new Date(booking.checkOut).toLocaleDateString()}</td>
+                            <td>${booking.roomType}</td>
+                            <td>${booking.guests}</td>
+                            <td>${new Date(booking.createdAt).toLocaleDateString()}</td>
+                        </tr>
+                    `).join('')}
+                </table>
+            `;
+            
+            document.getElementById('bookings').innerHTML = table;
+        }
+
+        // Load data on page load
+        loadBookings();
+    </script>
+</body>
+</html>

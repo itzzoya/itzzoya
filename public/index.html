@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Resort - Diwali Special Offers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Paradise Resort</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#offers">Diwali Offers</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#bookings">My Bookings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Paradise Resort</h1>
+                <p>Experience luxury and tranquility in our beautiful resort</p>
+                <a href="#booking" class="cta-button">Book Your Stay</a>
+            </div>
+        </section>
+
+        <section id="offers" class="diwali-offers">
+            <div class="container">
+                <h2>🪔 Diwali Special Offers 🪔</h2>
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <h3>Festival of Lights Package</h3>
+                        <div class="discount">50% OFF</div>
+                        <p>Celebrate Diwali with luxury! Includes decorated rooms, traditional sweets, and fireworks viewing.</p>
+                        <div class="price">₹4,999 <span class="original-price">₹9,999</span></div>
+                    </div>
+                    <div class="offer-card">
+                        <h3>Family Diwali Getaway</h3>
+                        <div class="discount">40% OFF</div>
+                        <p>Perfect for families! Kids activities, rangoli making, and traditional dinner included.</p>
+                        <div class="price">₹7,499 <span class="original-price">₹12,499</span></div>
+                    </div>
+                    <div class="offer-card">
+                        <h3>Romantic Diwali Escape</h3>
+                        <div class="discount">35% OFF</div>
+                        <p>Candlelit dinner, couple spa, and private balcony with diya decorations.</p>
+                        <div class="price">₹8,999 <span class="original-price">₹13,999</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="booking-section">
+            <div class="container">
+                <h2>Book Your Room</h2>
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkIn">Check-in Date *</label>
+                            <input type="date" id="checkIn" name="checkIn" required>
+                            <span class="error-message" id="checkInError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="checkOut">Check-out Date *</label>
+                            <input type="date" id="checkOut" name="checkOut" required>
+                            <span class="error-message" id="checkOutError"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="roomType">Room Type *</label>
+                            <select id="roomType" name="roomType" required>
+                                <option value="">Select Room Type</option>
+                                <option value="deluxe">Deluxe Room</option>
+                                <option value="suite">Suite</option>
+                                <option value="villa">Villa</option>
+                            </select>
+                            <span class="error-message" id="roomTypeError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="guests">Number of Guests *</label>
+                            <input type="number" id="guests" name="guests" min="1" max="10" required>
+                            <span class="error-message" id="guestsError"></span>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Book Now</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="bookings" class="bookings-section">
+            <div class="container">
+                <h2>Manage Bookings</h2>
+                <div id="bookingsList" class="bookings-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Paradise Resort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
