@@ -1,8 +1,11 @@
-# Paradise Resort Website
+# Paradise Resort Website - Render Deployment
 
 A complete resort booking website with Diwali special offers, form validation, and CRUD operations built with Node.js and MongoDB.
 
-## Features
+## 🚀 Live Demo
+Deployed on Render: [Your Render URL will be here]
+
+## 🌟 Features
 
 - **Responsive Design**: Mobile-friendly resort website
 - **Diwali Theme**: Special color scheme with gold, orange, and brown colors
@@ -12,36 +15,66 @@ A complete resort booking website with Diwali special offers, form validation, a
 - **Special Offers**: Diwali discount offers with attractive design
 - **Modern UI**: Gradient backgrounds, animations, and smooth transitions
 
-## Technologies Used
+## 🛠 Technologies Used
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB with Mongoose
 - **Styling**: Custom CSS with Google Fonts (Playfair Display, Lato)
+- **Hosting**: Render (Web Service)
 
-## Setup Instructions
+## 📋 Render Deployment Steps
 
-1. **Install Dependencies**:
+### 1. **Create MongoDB Atlas Database**
+   - Go to [MongoDB Atlas](https://www.mongodb.com/atlas)
+   - Create free cluster
+   - Get connection string
+
+### 2. **Deploy on Render**
+   - Go to [Render.com](https://render.com)
+   - Connect your GitHub repository
+   - Create new Web Service
+   - Use these settings:
+     - **Build Command**: `npm install`
+     - **Start Command**: `npm start`
+     - **Environment Variables**:
+       - `MONGODB_URI`: Your MongoDB Atlas connection string
+       - `NODE_ENV`: `production`
+
+### 3. **Environment Variables**
+   ```
+   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/resort_db
+   NODE_ENV=production
+   ```
+
+## 🏃‍♂️ Local Development
+
+1. **Clone Repository**:
+   ```bash
+   git clone https://github.com/itzzoya/itzzoya.git
+   cd itzzoya
+   ```
+
+2. **Install Dependencies**:
    ```bash
    npm install
    ```
 
-2. **Start MongoDB**:
-   Make sure MongoDB is running on your system (default port 27017)
-
-3. **Run the Application**:
+3. **Set Environment Variables**:
    ```bash
-   npm start
+   cp .env.example .env
+   # Edit .env with your MongoDB connection
    ```
-   Or for development with auto-restart:
+
+4. **Start Development Server**:
    ```bash
    npm run dev
    ```
 
-4. **Access the Website**:
-   Open your browser and go to `http://localhost:3000`
+5. **Access Website**:
+   Open `http://localhost:3001`
 
-## API Endpoints
+## 📡 API Endpoints
 
 - `GET /` - Main website
 - `POST /api/bookings` - Create new booking
@@ -49,17 +82,18 @@ A complete resort booking website with Diwali special offers, form validation, a
 - `GET /api/bookings/:id` - Get specific booking
 - `PUT /api/bookings/:id` - Update booking
 - `DELETE /api/bookings/:id` - Delete booking
+- `GET /admin.html` - Admin panel for viewing bookings
 
-## Form Validation Features
+## ✅ Form Validation Features
 
-- Name: Required, minimum 2 characters
-- Email: Required, valid email format
-- Phone: Required, 10-digit number
-- Check-in/Check-out: Required, valid date range
-- Room Type: Required selection
-- Guests: Required, 1-10 guests
+- **Name**: Required, minimum 2 characters
+- **Email**: Required, valid email format
+- **Phone**: Required, 10-digit number
+- **Check-in/Check-out**: Required, valid date range
+- **Room Type**: Required selection
+- **Guests**: Required, 1-10 guests
 
-## Diwali Special Features
+## 🎨 Diwali Special Features
 
 - **Color Scheme**: Gold (#ffd700), Orange (#ff6b35), Brown (#8b4513)
 - **Typography**: Elegant fonts (Playfair Display for headings)
@@ -67,27 +101,32 @@ A complete resort booking website with Diwali special offers, form validation, a
 - **Animations**: Smooth transitions and hover effects
 - **Festive Elements**: Diya patterns and festival-themed content
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 resort-website/
-├── server.js          # Main server file
-├── package.json       # Dependencies
-├── public/            # Static files
-│   ├── index.html     # Main HTML file
-│   ├── styles.css     # CSS styles
-│   └── script.js      # JavaScript functionality
-└── README.md          # This file
+├── server.js              # Main server file
+├── package.json           # Dependencies
+├── render.yaml           # Render deployment config
+├── .env.example          # Environment variables template
+├── public/               # Static files
+│   ├── index.html        # Main HTML file
+│   ├── styles.css        # CSS styles
+│   ├── script.js         # JavaScript functionality
+│   └── admin.html        # Admin panel
+├── check-db.js           # Database checker
+└── README.md             # This file
 ```
 
-## Usage
+## 🎯 Usage
 
-1. **Browse Offers**: View Diwali special packages on the homepage
-2. **Book Room**: Fill out the booking form with validation
+1. **Browse Offers**: View Diwali special packages on homepage
+2. **Book Room**: Fill out booking form with validation
 3. **Manage Bookings**: View, edit, or delete existing bookings
-4. **Responsive**: Works on desktop, tablet, and mobile devices
+4. **Admin Panel**: Access `/admin.html` to view all bookings
+5. **Responsive**: Works on desktop, tablet, and mobile devices
 
-## Database Schema
+## 🗄️ Database Schema
 
 ```javascript
 {
@@ -101,3 +140,13 @@ resort-website/
   createdAt: Date (default: now)
 }
 ```
+
+## 🔧 Troubleshooting
+
+- **MongoDB Connection**: Ensure MongoDB Atlas allows connections from anywhere (0.0.0.0/0)
+- **Environment Variables**: Double-check MONGODB_URI format
+- **Port Issues**: Render automatically assigns PORT environment variable
+
+## 📞 Support
+
+For issues or questions, please create an issue in the GitHub repository.

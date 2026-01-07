@@ -5,7 +5,7 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/resort_db', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/resort_db', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
